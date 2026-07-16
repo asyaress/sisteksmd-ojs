@@ -1,0 +1,36 @@
+# Konfigurasi produksi dan credential
+config.inc.php
+config.inc.php.*
+.env
+.user.ini
+
+# Cache OJS
+cache/*
+!cache/.gitkeep
+!cache/t_cache/
+!cache/t_cache/.gitkeep
+!cache/t_compile/
+!cache/t_compile/.gitkeep
+!cache/_db/
+!cache/_db/.gitkeep
+
+# Database dan backup
+*.sql
+*.sql.gz
+*.dump
+*.bak
+*.backup
+
+# Log dan temporary files
+*.log
+*.tmp
+*.swp
+
+# Editor dan sistem operasi
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Dependency frontend lokal
+node_modules/
