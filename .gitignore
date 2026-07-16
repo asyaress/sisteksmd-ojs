@@ -34,3 +34,4 @@ Thumbs.db
 
 # Dependency frontend lokal
 node_modules/
+.github/workflows/
