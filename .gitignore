@@ -1,19 +1,41 @@
+# Konfigurasi aktif dan credential
+config.inc.php
+config.inc.php.*
+.env
+.user.ini
 
+# Database dan backup mentah
+*.sql
+*.sql.gz
+*.dump
+*.backup
+*.tar
+*.tar.gz
+*.tar.gz.gpg
+
+# Cache runtime
+cache/*
 !cache/.gitkeep
-!cache/_db/
-!cache/_db/.gitkeep
 !cache/t_cache/
 !cache/t_cache/.gitkeep
 !cache/t_compile/
 !cache/t_compile/.gitkeep
-*.backup
-*.dump
-*.sql
-*.sql.gz
-.env
-.github/workflows/
-.user.ini
-cache/*
-config.inc.php
-config.inc.php.*
+!cache/_db/
+!cache/_db/.gitkeep
+
+# Data yang hanya disimpan dalam snapshot terenkripsi
 ojs-files/
+
+# Log dan temporary
+*.log
+*.tmp
+*.swp
+
+# Workflow PKP upstream
+.github/workflows/
+
+# Editor dan sistem
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
