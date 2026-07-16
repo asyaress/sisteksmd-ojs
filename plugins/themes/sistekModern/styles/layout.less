@@ -1,0 +1,156 @@
+/**
+ * SISTEK Modern Theme - Layout Foundation
+ * Phase 3B
+ */
+
+html,
+body {
+  background: @jkc-color-bg;
+  color: @jkc-color-text;
+  font-family: @jkc-font-body;
+  line-height: @jkc-line-normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: @jkc-font-heading;
+  color: @jkc-color-text;
+  margin-top: 0;
+}
+
+h1 { font-size: @jkc-text-h1; line-height: @jkc-line-tight; }
+h2 { font-size: @jkc-text-h2; line-height: @jkc-line-tight; }
+h3 { font-size: @jkc-text-h3; line-height: @jkc-line-tight; }
+
+small,
+.text-muted {
+  font-size: @jkc-text-small;
+  color: @jkc-color-text-muted;
+}
+
+/* Shared container rhythm */
+.pkp_site_name_wrapper,
+.pkp_navigation_primary_wrapper,
+.pkp_navigation_user,
+.pkp_search_mobile,
+.pkp_structure_content,
+.pkp_structure_footer {
+  max-width: @jkc-container-max;
+}
+
+.pkp_structure_page {
+  background: #f5f8f6;
+}
+
+.pkp_structure_content {
+  padding-top: @jkc-space-lg;
+  padding-bottom: @jkc-space-xl;
+}
+
+.pkp_structure_main {
+  background: transparent;
+  min-width: 0;
+}
+
+.pkp_structure_sidebar {
+  box-sizing: border-box;
+}
+
+/* Header visual baseline */
+.pkp_structure_head {
+  background: @jkc-color-surface;
+}
+
+.pkp_head_wrapper {
+  padding-top: @jkc-space-sm;
+  padding-bottom: @jkc-space-sm;
+}
+
+/* Sidebar card baseline */
+.pkp_structure_sidebar .pkp_block,
+.pkp_structure_sidebar .block {
+  margin-bottom: @jkc-space-lg;
+}
+
+.pkp_structure_sidebar .pkp_block .title,
+.pkp_structure_sidebar .block .title {
+  margin-bottom: @jkc-space-md;
+  font-family: @jkc-font-heading;
+  color: @jkc-color-text;
+}
+
+/* Main content spacing helpers */
+.page,
+.obj_article_details,
+.obj_issue_toc {
+  margin-bottom: @jkc-space-2xl;
+}
+
+/* Footer baseline */
+.pkp_structure_footer_wrapper {
+  background: #f9fbfa;
+  border-top: 1px solid fade(@jkc-color-border, 85%);
+}
+
+.pkp_structure_footer {
+  color: @jkc-color-text-muted;
+}
+
+.pkp_structure_footer a {
+  color: darken(@jkc-color-primary, 10%);
+}
+
+.pkp_structure_footer a:hover,
+.pkp_structure_footer a:focus {
+  color: darken(@jkc-color-primary, 18%);
+}
+
+.pkp_brand_footer {
+  border-top: 1px solid fade(@jkc-color-border, 75%);
+}
+
+/* Keep homepage content scoped to the main column only. */
+.pkp_page_index.pkp_op_index .jkc-home,
+.pkp_page_index.pkp_op_index .jkc-homepage {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+/* Homepage-only wide container and sidebar suppression for Unify-inspired top grid.
+ * `!important` is used only to reliably beat float/display rules from base OJS styles. */
+.pkp_page_index.pkp_op_index .pkp_site_name_wrapper,
+.pkp_page_index.pkp_op_index .pkp_navigation_primary_wrapper,
+.pkp_page_index.pkp_op_index .pkp_navigation_user_wrapper,
+.pkp_page_index.pkp_op_index .pkp_structure_content,
+.pkp_page_index.pkp_op_index .pkp_structure_footer {
+  width: ~"calc(100% - 92px)";
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.pkp_page_index.pkp_op_index .jkc_site_header .pkp_head_wrapper {
+  width: 100%;
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.pkp_page_index.pkp_op_index .pkp_structure_content.has_sidebar .pkp_structure_sidebar {
+  display: none !important;
+}
+
+.pkp_page_index.pkp_op_index .pkp_structure_content.has_sidebar .pkp_structure_main {
+  float: none;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-right: 0;
+}

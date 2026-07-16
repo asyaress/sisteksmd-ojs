@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" role="img" aria-labelledby="title desc">
+  <title id="title">Editorial team placeholder portrait</title>
+  <desc id="desc">A neutral placeholder illustration for editorial team profile photos.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5faf7"/>
+      <stop offset="100%" stop-color="#ebf3ef"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7aa897"/>
+      <stop offset="100%" stop-color="#3f7f69"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" rx="40" fill="url(#bg)"/>
+  <circle cx="300" cy="228" r="108" fill="#f2d19b"/>
+  <path d="M118 586c0-112 82-186 182-186s182 74 182 186v54H118z" fill="url(#accent)"/>
+  <circle cx="454" cy="134" r="34" fill="#dce9e3"/>
+  <circle cx="144" cy="604" r="22" fill="#dce9e3"/>
+</svg>

@@ -1,0 +1,308 @@
+/**
+ * SISTEK Modern Theme - Minimal Motion Layer
+ *
+ * Subtle motion only: short fades, small translations, and quiet hover states.
+ * No decorative moving backgrounds or heavy effects.
+ */
+
+@jkc-motion-fast: 140ms ease-out;
+@jkc-motion-normal: 260ms cubic-bezier(0.2, 0.8, 0.2, 1);
+@jkc-motion-slow: 420ms cubic-bezier(0.2, 0.8, 0.2, 1);
+
+@keyframes jkc-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes jkc-soft-reveal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes jkc-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.jkc_theme .pkp_structure_content,
+.jkc_theme .jkc-header-masthead,
+.jkc_theme .jkc_site_nav {
+  animation: jkc-soft-reveal @jkc-motion-slow both;
+}
+
+.jkc_theme .cmp_breadcrumbs,
+.jkc_theme .pkp_structure_main > .page,
+.jkc_theme .obj_article_details,
+.jkc_theme .obj_issue_toc,
+.jkc_theme .jkc-home > *,
+.jkc_theme .jkc-homepage > * {
+  animation: jkc-fade-up @jkc-motion-slow both;
+}
+
+.jkc_theme .cmp_breadcrumbs {
+  animation-delay: 40ms;
+}
+
+.jkc_theme .pkp_structure_main > .page,
+.jkc_theme .obj_article_details,
+.jkc_theme .obj_issue_toc,
+.jkc_theme .jkc-home > :nth-child(1),
+.jkc_theme .jkc-homepage > :nth-child(1) {
+  animation-delay: 70ms;
+}
+
+.jkc_theme .jkc-home > :nth-child(2),
+.jkc_theme .jkc-homepage > :nth-child(2) {
+  animation-delay: 120ms;
+}
+
+.jkc_theme .jkc-home > :nth-child(3),
+.jkc_theme .jkc-homepage > :nth-child(3) {
+  animation-delay: 170ms;
+}
+
+.jkc_theme .jkc-home > :nth-child(n + 4),
+.jkc_theme .jkc-homepage > :nth-child(n + 4) {
+  animation-delay: 210ms;
+}
+
+.jkc_theme .pkp_structure_sidebar .block,
+.jkc_theme .pkp_structure_sidebar .pkp_block,
+.jkc_theme:not(.pkp_page_index) .jkc-sidebar-panel {
+  animation: jkc-fade-up @jkc-motion-slow both;
+  animation-delay: 120ms;
+}
+
+.jkc_theme .jkc-card,
+.jkc_theme .jkc-panel,
+.jkc_theme .obj_article_summary,
+.jkc_theme .obj_issue_summary,
+.jkc_theme .jkc-policy-card,
+.jkc_theme .jkc-index-card,
+.jkc_theme .jkc-article-card,
+.jkc_theme .jkc-announcement-summary-card,
+.jkc_theme .jkc-announcement-card,
+.jkc_theme .jkc-editorial-pick-card,
+.jkc_theme .jkc-contact-card,
+.jkc_theme .jkc-article-panel,
+.jkc_theme .jkc-article-aside-card,
+.jkc_theme .jkc-article-rec-showcase {
+  transition:
+    transform @jkc-motion-normal,
+    border-color @jkc-motion-fast,
+    background-color @jkc-motion-fast,
+    box-shadow @jkc-motion-normal,
+    color @jkc-motion-fast;
+}
+
+.jkc_theme .jkc-card:hover,
+.jkc_theme .jkc-card:focus-within,
+.jkc_theme .jkc-policy-card:hover,
+.jkc_theme .jkc-policy-card:focus-within,
+.jkc_theme .jkc-index-card:hover,
+.jkc_theme .jkc-index-card:focus-within,
+.jkc_theme .obj_article_summary:hover,
+.jkc_theme .obj_article_summary:focus-within,
+.jkc_theme .obj_issue_summary:hover,
+.jkc_theme .obj_issue_summary:focus-within,
+.jkc_theme .jkc-article-card:hover,
+.jkc_theme .jkc-article-card:focus-within,
+.jkc_theme .jkc-announcement-summary-card:hover,
+.jkc_theme .jkc-announcement-summary-card:focus-within,
+.jkc_theme .jkc-announcement-card:hover,
+.jkc_theme .jkc-announcement-card:focus-within,
+.jkc_theme .jkc-editorial-pick-card:hover,
+.jkc_theme .jkc-editorial-pick-card:focus-within,
+.jkc_theme .jkc-contact-card:hover,
+.jkc_theme .jkc-contact-card:focus-within,
+.jkc_theme .jkc-article-panel:hover,
+.jkc_theme .jkc-article-panel:focus-within,
+.jkc_theme .jkc-article-aside-card:hover,
+.jkc_theme .jkc-article-aside-card:focus-within,
+.jkc_theme .jkc-article-rec-showcase:hover,
+.jkc_theme .jkc-article-rec-showcase:focus-within {
+  transform: translateY(-2px);
+  border-color: fade(@jkc-color-primary, 24%);
+}
+
+.jkc_theme .jkc-button,
+.jkc_theme .cmp_button,
+.jkc_theme .cmp_manuscript_button,
+.jkc_theme .obj_galley_link,
+.jkc_theme .jkc-submit-card,
+.jkc_theme .jkc-template-card,
+.jkc_theme .jkc-slider-arrow,
+.jkc_theme .jkc-contact-link,
+.jkc_theme .pkp_navigation_search_wrapper .pkp_search,
+.jkc_theme .jkc_site_nav .pkp_navigation_primary > li > a {
+  transition:
+    transform @jkc-motion-fast,
+    background-color @jkc-motion-fast,
+    border-color @jkc-motion-fast,
+    color @jkc-motion-fast,
+    opacity @jkc-motion-fast;
+}
+
+.jkc_theme .jkc-button:hover,
+.jkc_theme .jkc-button:focus,
+.jkc_theme .cmp_button:hover,
+.jkc_theme .cmp_button:focus,
+.jkc_theme .cmp_manuscript_button:hover,
+.jkc_theme .cmp_manuscript_button:focus,
+.jkc_theme .obj_galley_link:hover,
+.jkc_theme .obj_galley_link:focus,
+.jkc_theme .jkc-submit-card:hover,
+.jkc_theme .jkc-submit-card:focus,
+.jkc_theme .jkc-template-card:hover,
+.jkc_theme .jkc-template-card:focus,
+.jkc_theme .jkc-slider-arrow:hover,
+.jkc_theme .jkc-slider-arrow:focus,
+.jkc_theme .jkc-contact-link:hover,
+.jkc_theme .jkc-contact-link:focus {
+  transform: translateY(-1px);
+}
+
+.jkc_theme .jkc_site_nav .pkp_navigation_primary > li > a:hover,
+.jkc_theme .jkc_site_nav .pkp_navigation_primary > li > a:focus,
+.jkc_theme .pkp_navigation_search_wrapper .pkp_search:hover,
+.jkc_theme .pkp_navigation_search_wrapper .pkp_search:focus {
+  transform: translateY(-1px);
+}
+
+.jkc_theme .jkc-feature-banner,
+.jkc_theme .jkc-issue-hero,
+.jkc_theme .jkc-archive-hero,
+.jkc_theme .jkc-announcements-hero,
+.jkc_theme .jkc-announcement-hero,
+.jkc_theme .jkc-submissions-hero {
+  animation: jkc-scale-in @jkc-motion-slow both;
+  transform-origin: center top;
+}
+
+.jkc_theme .jkc-feature-banner__slide img {
+  transition: transform 900ms ease;
+}
+
+.jkc_theme .jkc-feature-banner:hover .jkc-feature-banner__slide img {
+  transform: scale(1.025);
+}
+
+.jkc_theme .jkc-announcement-summary-card__icon,
+.jkc_theme .jkc-announcement-card__icon,
+.jkc_theme .jkc-action-card__icon,
+.jkc_theme .jkc-sidebar-template__icon,
+.jkc_theme .jkc-contact-card__icon {
+  transition:
+    transform @jkc-motion-normal,
+    background-color @jkc-motion-fast,
+    color @jkc-motion-fast;
+}
+
+.jkc_theme .jkc-announcement-summary-card:hover .jkc-announcement-summary-card__icon,
+.jkc_theme .jkc-announcement-summary-card:focus-within .jkc-announcement-summary-card__icon,
+.jkc_theme .jkc-announcement-card:hover .jkc-announcement-card__icon,
+.jkc_theme .jkc-announcement-card:focus-within .jkc-announcement-card__icon,
+.jkc_theme .jkc-submit-card:hover .jkc-action-card__icon,
+.jkc_theme .jkc-submit-card:focus .jkc-action-card__icon,
+.jkc_theme .jkc-template-card:hover .jkc-action-card__icon,
+.jkc_theme .jkc-template-card:focus .jkc-action-card__icon,
+.jkc_theme .jkc-sidebar-template:hover .jkc-sidebar-template__icon,
+.jkc_theme .jkc-sidebar-template:focus .jkc-sidebar-template__icon,
+.jkc_theme .jkc-contact-card:hover .jkc-contact-card__icon,
+.jkc_theme .jkc-contact-card:focus-within .jkc-contact-card__icon {
+  transform: scale(1.035);
+}
+
+.jkc_theme .jkc-article-card__thumb img,
+.jkc_theme .jkc-editorial-pick-card__thumb img,
+.jkc_theme .jkc-rec-cover-card__image img,
+.jkc_theme .jkc-thumbnail img,
+.jkc_theme .jkc-issue-rail-card__cover img {
+  transition:
+    transform 520ms ease,
+    opacity @jkc-motion-normal;
+}
+
+.jkc_theme .jkc-article-card:hover .jkc-article-card__thumb img,
+.jkc_theme .jkc-article-card:focus-within .jkc-article-card__thumb img,
+.jkc_theme .jkc-editorial-pick-card:hover .jkc-editorial-pick-card__thumb img,
+.jkc_theme .jkc-editorial-pick-card:focus-within .jkc-editorial-pick-card__thumb img,
+.jkc_theme .jkc-rec-cover-card:hover .jkc-rec-cover-card__image img,
+.jkc_theme .jkc-rec-cover-card:focus-within .jkc-rec-cover-card__image img,
+.jkc_theme .jkc-thumbnail:hover img,
+.jkc_theme .jkc-thumbnail:focus-within img,
+.jkc_theme .jkc-issue-rail-card__cover:hover img,
+.jkc_theme .jkc-issue-rail-card__cover:focus-within img {
+  transform: scale(1.025);
+}
+
+.jkc_theme a {
+  transition:
+    color @jkc-motion-fast,
+    text-decoration-color @jkc-motion-fast,
+    opacity @jkc-motion-fast;
+}
+
+.jkc_theme a:focus-visible,
+.jkc_theme button:focus-visible,
+.jkc_theme input:focus-visible,
+.jkc_theme select:focus-visible,
+.jkc_theme textarea:focus-visible {
+  outline: 2px solid fade(@jkc-color-primary, 70%);
+  outline-offset: 3px;
+}
+
+@media (hover: none) {
+  .jkc_theme .jkc-card:hover,
+  .jkc_theme .jkc-policy-card:hover,
+  .jkc_theme .jkc-index-card:hover,
+  .jkc_theme .obj_article_summary:hover,
+  .jkc_theme .obj_issue_summary:hover,
+  .jkc_theme .jkc-article-card:hover,
+  .jkc_theme .jkc-announcement-summary-card:hover,
+  .jkc_theme .jkc-announcement-card:hover,
+  .jkc_theme .jkc-editorial-pick-card:hover,
+  .jkc_theme .jkc-contact-card:hover,
+  .jkc_theme .jkc-article-panel:hover,
+  .jkc_theme .jkc-article-aside-card:hover,
+  .jkc_theme .jkc-article-rec-showcase:hover,
+  .jkc_theme .jkc-button:hover,
+  .jkc_theme .cmp_button:hover,
+  .jkc_theme .cmp_manuscript_button:hover,
+  .jkc_theme .obj_galley_link:hover,
+  .jkc_theme .jkc-submit-card:hover,
+  .jkc_theme .jkc-template-card:hover,
+  .jkc_theme .jkc-slider-arrow:hover,
+  .jkc_theme .jkc-contact-link:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jkc_theme *,
+  .jkc_theme *::before,
+  .jkc_theme *::after {
+    animation: none;
+    scroll-behavior: auto;
+    transition-duration: 0.01ms;
+  }
+}

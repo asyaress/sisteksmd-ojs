@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc">
+  <title id="title">SISTEK Feature Banner</title>
+  <desc id="desc">Clean information technology banner in white, blue, and amber tones.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f4f9fd"/>
+    </linearGradient>
+    <linearGradient id="sageA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f5f8f" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#52a7c8" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="sageB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f2b84b" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0f5f8f" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="760" fill="url(#bg)"/>
+
+  <polygon points="0,0 620,0 360,320" fill="url(#sageA)"/>
+  <polygon points="1600,0 1600,300 1240,120" fill="url(#sageB)"/>
+  <polygon points="480,760 920,760 690,500" fill="url(#sageB)"/>
+  <polygon points="1060,760 1600,760 1600,540" fill="url(#sageA)"/>
+
+  <g stroke="#93bfd5" stroke-width="1.2" stroke-opacity="0.55" fill="none">
+    <line x1="170" y1="170" x2="310" y2="240"/>
+    <line x1="310" y1="240" x2="450" y2="180"/>
+    <line x1="310" y1="240" x2="420" y2="330"/>
+    <line x1="450" y1="180" x2="580" y2="230"/>
+    <line x1="420" y1="330" x2="580" y2="230"/>
+    <line x1="580" y1="230" x2="700" y2="300"/>
+  </g>
+  <g fill="#0f5f8f" fill-opacity="0.34">
+    <circle cx="170" cy="170" r="8"/>
+    <circle cx="310" cy="240" r="9"/>
+    <circle cx="450" cy="180" r="8"/>
+    <circle cx="420" cy="330" r="8"/>
+    <circle cx="580" cy="230" r="9"/>
+    <circle cx="700" cy="300" r="8"/>
+  </g>
+
+  <rect x="1040" y="346" width="420" height="210" rx="18" fill="#ffffff" fill-opacity="0.9" stroke="#cfdde8"/>
+  <rect x="1074" y="388" width="310" height="14" rx="7" fill="#52a7c8" fill-opacity="0.36"/>
+  <rect x="1074" y="424" width="330" height="11" rx="5.5" fill="#52a7c8" fill-opacity="0.28"/>
+  <rect x="1074" y="452" width="286" height="11" rx="5.5" fill="#52a7c8" fill-opacity="0.28"/>
+  <rect x="1074" y="485" width="152" height="36" rx="18" fill="#0f5f8f" fill-opacity="0.78"/>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" fill="none">
+  <defs>
+    <linearGradient id="mailBg" x1="48" y1="32" x2="1152" y2="208" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A493D"/>
+      <stop offset="1" stop-color="#214F43"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="240" rx="48" fill="url(#mailBg)"/>
+  <rect x="1" y="1" width="1198" height="238" rx="47" stroke="#2F6356" stroke-opacity="0.7"/>
+
+  <g opacity="0.14">
+    <circle cx="1062" cy="72" r="34" stroke="#F0F7F3" stroke-width="2"/>
+    <circle cx="1110" cy="116" r="34" stroke="#F0F7F3" stroke-width="2"/>
+    <circle cx="1058" cy="160" r="34" stroke="#F0F7F3" stroke-width="2"/>
+    <path d="M1033 88L1086 116L1033 144M1086 116L1139 144M1086 116L1086 160" stroke="#F0F7F3" stroke-width="2"/>
+  </g>
+
+  <rect x="54" y="54" width="132" height="132" rx="34" fill="#EAF4EF" fill-opacity="0.12"/>
+  <circle cx="120" cy="120" r="42" fill="#FFFFFF"/>
+  <path d="M92 103.5C92 97.701 96.701 93 102.5 93H137.5C143.299 93 148 97.701 148 103.5V136.5C148 142.299 143.299 147 137.5 147H102.5C96.701 147 92 142.299 92 136.5V103.5Z" fill="#2F7A67" fill-opacity="0.12"/>
+  <path d="M98 102.5L120 119L142 102.5" stroke="#2F7A67" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M98 138L112 124.5M142 138L128 124.5" stroke="#2F7A67" stroke-width="5.5" stroke-linecap="round"/>
+  <rect x="98" y="102.5" width="44" height="35" rx="6" stroke="#2F7A67" stroke-width="5.5"/>
+  <path d="M222 68V172" stroke="#D6E5DC" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+
+  <text x="266" y="92" fill="#D2E0DA" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="0.14em">EMAIL</text>
+  <text x="266" y="151" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="46" font-weight="700">Contact Editorial Office</text>
+</svg>

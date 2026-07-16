@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="960" viewBox="0 0 720 960" role="img" aria-labelledby="title desc">
+  <title id="title">SISTEK-SMD Current Issue Cover</title>
+  <desc id="desc">Blue technology-themed placeholder cover for SISTEK-SMD current issue.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4f9fd"/>
+      <stop offset="0.62" stop-color="#dff0f8"/>
+      <stop offset="1" stop-color="#fff5db"/>
+    </linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0v44" fill="none" stroke="#b7d3e3" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="720" height="960" rx="0" fill="url(#bg)"/>
+  <rect width="720" height="960" fill="url(#grid)" opacity="0.32"/>
+  <circle cx="552" cy="182" r="96" fill="#0f5f8f" opacity="0.12"/>
+  <circle cx="600" cy="780" r="150" fill="#f2b84b" opacity="0.18"/>
+  <path d="M92 644c98-132 210-82 302-198 62-78 106-194 244-218" fill="none" stroke="#0f5f8f" stroke-width="10" stroke-linecap="round" opacity="0.4"/>
+  <g fill="#0f5f8f">
+    <circle cx="92" cy="644" r="13"/>
+    <circle cx="238" cy="582" r="13"/>
+    <circle cx="394" cy="446" r="13"/>
+    <circle cx="514" cy="292" r="13"/>
+    <circle cx="638" cy="228" r="13"/>
+  </g>
+  <rect x="72" y="86" width="96" height="96" rx="18" fill="#0f5f8f"/>
+  <path d="M101 146c8 8 32 8 40 0 5-5 4-13-1-17-7-5-24-4-30-8-4-2-3-6 1-8 7-5 22-3 30 3" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+  <text x="72" y="244" fill="#113c5c" font-family="Arial, sans-serif" font-size="44" font-weight="800">SISTEK-SMD</text>
+  <text x="72" y="288" fill="#275d78" font-family="Arial, sans-serif" font-size="24" font-weight="600">Jurnal Sistem Informasi dan Teknologi</text>
+  <line x1="72" y1="334" x2="648" y2="334" stroke="#f2b84b" stroke-width="8" stroke-linecap="round"/>
+  <text x="72" y="420" fill="#113c5c" font-family="Arial, sans-serif" font-size="56" font-weight="800">Current Issue</text>
+  <text x="72" y="472" fill="#426d82" font-family="Arial, sans-serif" font-size="28" font-weight="700">Volume 1, Number 1, 2026</text>
+  <text x="72" y="794" fill="#275d78" font-family="Arial, sans-serif" font-size="22">Open Access • Peer Reviewed</text>
+  <text x="72" y="832" fill="#426d82" font-family="Arial, sans-serif" font-size="20">sisteksmd.org</text>
+</svg>

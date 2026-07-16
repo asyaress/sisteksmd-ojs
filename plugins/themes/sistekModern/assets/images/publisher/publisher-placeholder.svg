@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="240" viewBox="0 0 640 240" fill="none">
+  <rect width="640" height="240" rx="24" fill="#F7FBF9"/>
+  <rect x="44" y="44" width="552" height="152" rx="18" fill="#FFFFFF" stroke="#D7E3DD"/>
+  <path d="M120 84H164V156H120V84Z" fill="#2F7A67"/>
+  <path d="M172 84H218V112H172V84Z" fill="#8CB8A9"/>
+  <path d="M172 120H254V156H172V120Z" fill="#214A42"/>
+  <text x="290" y="111" fill="#214A42" font-family="Arial, sans-serif" font-size="28" font-weight="700">Publisher Logo</text>
+  <text x="290" y="147" fill="#537067" font-family="Arial, sans-serif" font-size="20">Add publisher.png in assets/images/publisher/</text>
+</svg>
