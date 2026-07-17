@@ -87,6 +87,9 @@
 								<p class="jkc-header-masthead__issn">pISSN : {if $jkcHeaderContext && $jkcHeaderContext->getData('printIssn') && $jkcHeaderContext->getData('printIssn')|lower != 'xxxx-xxxx'}{$jkcHeaderContext->getData('printIssn')|escape}{else}-{/if}</p>
 							</div>
 						</div>
+						<div class="jkc-header-masthead__partner" aria-label="STMIK Widya Cipta Dharma">
+							<img src="{$baseUrl}/plugins/themes/sistekModern/assets/images/wicida-logo.webp" alt="STMIK Widya Cipta Dharma" loading="lazy" />
+						</div>
 					</div>
 					<div class="jkc-header-masthead__pattern" aria-hidden="true">
 						<img src="{$baseUrl}/plugins/themes/sistekModern/assets/images/jkc-masthead-pattern.svg" alt="" loading="lazy" />

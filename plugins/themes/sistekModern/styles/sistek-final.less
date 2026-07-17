@@ -37,6 +37,10 @@
 }
 
 .jkc_theme .jkc-header-masthead__inner {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  align-items: center !important;
+  gap: clamp(18px, 3vw, 48px) !important;
   width: 100%;
   max-width: 1320px;
   margin: 0;
@@ -92,6 +96,26 @@
   color: #426d82 !important;
   font-size: 12px !important;
   line-height: 1.35 !important;
+}
+
+.jkc_theme .jkc-header-masthead__partner {
+  position: relative !important;
+  z-index: 2 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  justify-self: end !important;
+  width: clamp(72px, 8vw, 108px) !important;
+  min-width: 72px !important;
+  padding: 0 !important;
+}
+
+.jkc_theme .jkc-header-masthead__partner img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 108px !important;
+  height: auto !important;
+  object-fit: contain !important;
 }
 
 .jkc_theme .jkc_site_nav .pkp_navigation_primary_row {
@@ -387,6 +411,16 @@
     gap: 12px !important;
   }
 
+  .jkc_theme .jkc-header-masthead__inner {
+    grid-template-columns: minmax(0, 1fr) 74px !important;
+    gap: 16px !important;
+  }
+
+  .jkc_theme .jkc-header-masthead__partner {
+    width: 74px !important;
+    min-width: 74px !important;
+  }
+
   .jkc_theme .jkc-header-masthead__logo,
   .jkc_theme .jkc-header-masthead--compact .jkc-header-masthead__logo {
     width: 104px !important;
@@ -453,6 +487,14 @@
   .jkc_theme .jkc-header-masthead--compact .jkc-header-masthead__identity {
     grid-template-columns: 76px minmax(0, 1fr) !important;
     gap: 12px !important;
+  }
+
+  .jkc_theme .jkc-header-masthead__inner {
+    grid-template-columns: 1fr !important;
+  }
+
+  .jkc_theme .jkc-header-masthead__partner {
+    display: none !important;
   }
 
   .jkc_theme .jkc-header-masthead__logo,
