@@ -40,7 +40,7 @@ class SistekModernThemePlugin extends \PKP\plugins\ThemePlugin
         ]);
 
         // Minimal visual proof that custom theme is active.
-        $this->addStyle('sistekModernStyles20260717a', 'styles/index.less', [
+        $this->addStyle('sistekModernStyles20260717c', 'styles/index.less', [
             'priority' => TemplateManager::STYLE_SEQUENCE_LAST,
         ]);
         $this->addScript('jkcHomeArticles', 'assets/js/home-articles.js', ['priority' => 110]);
