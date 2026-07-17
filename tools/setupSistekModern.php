@@ -324,7 +324,7 @@ try {
 
     $mysqli->commit();
 
-    foreach (['cache/t_compile', 'cache/t_cache', 'cache/_db'] as $cacheDir) {
+    foreach (['cache/t_compile', 'cache/t_cache', 'cache/_db', 'cache/opcache', 'cache/HTML'] as $cacheDir) {
         $dir = $root . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $cacheDir);
         if (is_dir($dir)) {
             $files = new RecursiveIteratorIterator(
