@@ -58,7 +58,7 @@
 					{if $displayPageHeaderLogo}
 						<img src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}" width="{$displayPageHeaderLogo.width|escape}" height="{$displayPageHeaderLogo.height|escape}" {if $displayPageHeaderLogo.altText != ''}alt="{$displayPageHeaderLogo.altText|escape}"{else}alt="{$jkcFooterTitle|escape}"{/if} loading="lazy">
 					{else}
-						<img src="{$baseUrl}/plugins/themes/sistekModern/assets/images/sistek-logo-placeholder.svg" alt="{$jkcFooterTitle|escape}" loading="lazy">
+						<img src="{$baseUrl}/plugins/themes/sistekModern/assets/images/sistek-logo.png" alt="{$jkcFooterTitle|escape}" loading="lazy">
 					{/if}
 				</a>
 				{if $jkcFooterPublisher}

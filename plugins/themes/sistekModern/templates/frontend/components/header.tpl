@@ -77,7 +77,7 @@
 								{if $displayPageHeaderLogo}
 									<img src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}" width="{$displayPageHeaderLogo.width|escape}" height="{$displayPageHeaderLogo.height|escape}" {if $displayPageHeaderLogo.altText != ''}alt="{$displayPageHeaderLogo.altText|escape}"{else}alt="{$headerJournalName|escape}"{/if} loading="lazy" />
 								{else}
-									<img src="{$baseUrl}/plugins/themes/sistekModern/assets/images/sistek-logo-placeholder.svg" alt="{$headerJournalName|escape}" loading="lazy" />
+									<img src="{$baseUrl}/plugins/themes/sistekModern/assets/images/sistek-logo.png" alt="{$headerJournalName|escape}" loading="lazy" />
 								{/if}
 							</a>
 							<div class="jkc-header-masthead__copy">
