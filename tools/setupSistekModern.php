@@ -101,10 +101,36 @@ function setItemSetting(mysqli $mysqli, int $itemId, string $locale, string $nam
     );
 }
 
+function setAssignmentSetting(mysqli $mysqli, int $assignmentId, string $locale, string $name, string $value, string $type = 'string'): void
+{
+    q(
+        $mysqli,
+        "DELETE FROM navigation_menu_item_assignment_settings
+         WHERE navigation_menu_item_assignment_id = {$assignmentId}
+           AND locale = " . esc($mysqli, $locale) . "
+           AND setting_name = " . esc($mysqli, $name)
+    );
+
+    q(
+        $mysqli,
+        "INSERT INTO navigation_menu_item_assignment_settings
+         (navigation_menu_item_assignment_id, locale, setting_name, setting_value, setting_type)
+         VALUES ({$assignmentId}, " . esc($mysqli, $locale) . ', ' . esc($mysqli, $name) . ', ' . esc($mysqli, $value) . ', ' . esc($mysqli, $type) . ')'
+    );
+}
+
 function setLocalizedItemSetting(mysqli $mysqli, int $itemId, string $name, string $value, string $type = 'string'): void
 {
-    setItemSetting($mysqli, $itemId, 'id', $name, $value, $type);
-    setItemSetting($mysqli, $itemId, 'en', $name, $value, $type);
+    foreach (['id', 'id_ID', 'en', 'en_US'] as $locale) {
+        setItemSetting($mysqli, $itemId, $locale, $name, $value, $type);
+    }
+}
+
+function setLocalizedAssignmentSetting(mysqli $mysqli, int $assignmentId, string $name, string $value, string $type = 'string'): void
+{
+    foreach (['id', 'id_ID', 'en', 'en_US'] as $locale) {
+        setAssignmentSetting($mysqli, $assignmentId, $locale, $name, $value, $type);
+    }
 }
 
 try {
@@ -257,6 +283,19 @@ try {
         [$contact, (string) $aboutParent, 3],
     ];
 
+    $assignmentTitles = [
+        $home => 'HOME',
+        $submissions => 'SUBMISSIONS',
+        $current => 'CURRENT',
+        $archives => 'ARCHIVES',
+        $announcements => 'ANNOUNCEMENTS',
+        $aboutParent => 'ABOUT',
+        $aboutChild => 'About the Journal',
+        $masthead => 'Editorial Team',
+        $privacy => 'Privacy Statement',
+        $contact => 'Contact',
+    ];
+
     foreach ($assignments as [$itemId, $parentId, $seq]) {
         q(
             $mysqli,
@@ -264,6 +303,11 @@ try {
              (navigation_menu_id, navigation_menu_item_id, parent_id, seq)
              VALUES ({$menuId}, {$itemId}, {$parentId}, {$seq})"
         );
+
+        $assignmentId = (int) $mysqli->insert_id;
+        if (isset($assignmentTitles[$itemId])) {
+            setLocalizedAssignmentSetting($mysqli, $assignmentId, 'title', $assignmentTitles[$itemId]);
+        }
     }
 
     $mysqli->commit();
