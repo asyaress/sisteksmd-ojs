@@ -126,6 +126,16 @@ function setLocalizedItemSetting(mysqli $mysqli, int $itemId, string $name, stri
     }
 }
 
+function clearItemSetting(mysqli $mysqli, int $itemId, string $name): void
+{
+    q(
+        $mysqli,
+        "DELETE FROM navigation_menu_item_settings
+         WHERE navigation_menu_item_id = {$itemId}
+           AND setting_name = " . esc($mysqli, $name)
+    );
+}
+
 function setLocalizedAssignmentSetting(mysqli $mysqli, int $assignmentId, string $name, string $value, string $type = 'string'): void
 {
     foreach (['id', 'id_ID', 'en', 'en_US'] as $locale) {
@@ -266,7 +276,9 @@ try {
         $contact => 'Contact',
     ];
     foreach ($titles as $itemId => $title) {
-        setLocalizedItemSetting($mysqli, (int) $itemId, 'title', $title);
+        $itemId = (int) $itemId;
+        clearItemSetting($mysqli, $itemId, 'titleLocaleKey');
+        setLocalizedItemSetting($mysqli, $itemId, 'title', $title);
     }
 
     q($mysqli, "DELETE FROM navigation_menu_item_assignments WHERE navigation_menu_id = {$menuId}");
